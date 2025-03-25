@@ -4,61 +4,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spatial Media Browser - 技术支持</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-        h1, h2, h3 { color: #333; }
-        a { color: #007BFF; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #0056b3);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .faq-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .contact-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .contact-button:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Spatial Media Browser - 技术支持</h1>
+    <header>
+        <div class="container">
+            <h1>Spatial Media Browser - 技术支持</h1>
+            <p>您的空间媒体管理专家</p>
+        </div>
+    </header>
 
-    <h2>关于 Spatial Media Browser</h2>
-    <p>Spatial Media Browser 是您在 visionOS 上管理并探索个人空间照片和视频的中心枢纽。与其他提供精选内容的应用不同，此应用专注于您的记忆，让您能够组织、存储并以全新的维度重温这些记忆。</p>
+    <div class="container">
+        <section>
+            <h2>关于 Spatial Media Browser</h2>
+            <p>Spatial Media Browser 是您在 visionOS 上管理并探索个人空间照片和视频的中心枢纽。与其他提供精选内容的应用不同，此应用专注于您的记忆，让您能够组织、存储并以全新的维度重温这些记忆。</p>
+        </section>
 
-    <h2>主要功能</h2>
-    <ul>
-        <li><strong>本地媒体管理</strong>：在设备上本地存储并组织您的空间媒体文件。</li>
-        <li><strong>导入选项</strong>：从 Photos 应用导入媒体，或从 Mac 上传，以保持您的收藏始终更新。</li>
-        <li><strong>目录管理</strong>：创建并管理多级目录，高效分类您的媒体。</li>
-        <li><strong>收藏管理</strong>：标记您最喜爱的照片和视频，以便快速访问。</li>
-        <li><strong>连续预览</strong>：使用连续预览功能无缝浏览您的媒体集合，无需中断。</li>
-    </ul>
-    <p>通过 Spatial Media Browser，您的空间媒体不仅被存储，还以增强 visionOS 体验的方式呈现。</p>
+        <section>
+            <h2>主要功能</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-folder-open feature-icon"></i>
+                    <h3>本地媒体管理</h3>
+                    <p>在设备上本地存储并组织您的空间媒体文件。</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-file-import feature-icon"></i>
+                    <h3>导入选项</h3>
+                    <p>从 Photos 应用导入媒体，或从 Mac 上传，以保持您的收藏始终更新。</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-sitemap feature-icon"></i>
+                    <h3>目录管理</h3>
+                    <p>创建并管理多级目录，高效分类您的媒体。</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heart feature-icon"></i>
+                    <h3>收藏管理</h3>
+                    <p>标记您最喜爱的照片和视频，以便快速访问。</p>
+                </div>
+            </div>
+        </section>
 
-    <h2>功能详情</h2>
-    <h3>媒体文件管理</h3>
-    <ul>
-        <li>目录管理：创建新目录分类您的媒体文件，支持多级目录以实现高级组织。</li>
-        <li>从 Photos 导入：轻松从 Photos 应用导入照片和空间媒体文件。</li>
-        <li>从 Mac 导入：将媒体文件上传至应用的 Documents 目录。</li>
-        <li>文件操作：支持复制、移动、重命名和删除文件及目录，以保持库的整洁。</li>
-    </ul>
+        <section class="faq-section">
+            <h2>常见问题（FAQ）</h2>
+            <div class="faq-item">
+                <p class="faq-question">1. Spatial Media Browser 支持哪些文件类型？</p>
+                <p>支持 Photos 应用中的所有文件类型，包括空间照片和视频。</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">2. 如何从 Mac 导入媒体文件？</p>
+                <p>您可以将媒体文件上传至应用的 Documents 目录，具体操作请参考MAC使用手册的文件同步说明。</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">3. 应用是否支持云存储？</p>
+                <p>目前 Spatial Media Browser 专注于本地存储，暂时不支持云存储功能。</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">4. 如何联系支持团队？</p>
+                <p>如果您有任何问题，请通过下方邮箱联系我们，我们会尽快回复。</p>
+            </div>
+        </section>
 
-    <h3>收藏管理</h3>
-    <ul>
-        <li>照片收藏：收藏您喜欢的照片和视频，这些文件将在单独的收藏窗口中显示，便于快速访问。</li>
-    </ul>
-
-    <h3>媒体文件预览</h3>
-    <ul>
-        <li>支持的文件类型：管理 Photos 应用中的所有文件类型，包括空间照片和视频。</li>
-        <li>连续预览：预览文件时，使用前进和后退箭头切换文件，无需关闭当前文件，提供流畅的浏览体验。</li>
-    </ul>
-
-    <h2>常见问题（FAQ）</h2>
-    <p><strong>1. Spatial Media Browser 支持哪些文件类型？</strong><br>
-    支持 Photos 应用中的所有文件类型，包括空间照片和视频。</p>
-    <p><strong>2. 如何从 Mac 导入媒体文件？</strong><br>
-    您可以将媒体文件上传至应用的 Documents 目录，具体操作请参考MAC使用手册的文件同步说明。</p>
-    <p><strong>3. 应用是否支持云存储？</strong><br>
-    目前 Spatial Media Browser 专注于本地存储，暂时不支持云存储功能。</p>
-    <p><strong>4. 如何联系支持团队？</strong><br>
-    如果您有任何问题，请通过下方邮箱联系我们，我们会尽快回复。</p>
-
-    <h2>联系我们</h2>
-    <p>如果您在使用 Spatial Media Browser 时遇到任何问题，或有任何建议，请通过以下邮箱联系我们：<br>
-    📧 <a href="mailto:boluobn@gmail.com">boluobn@gmail.com</a></p>
+        <section class="contact-section">
+            <h2>联系我们</h2>
+            <p>如果您在使用 Spatial Media Browser 时遇到任何问题，或有任何建议，请随时联系我们</p>
+            <a href="mailto:boluobn@gmail.com" class="contact-button">
+                <i class="fas fa-envelope"></i> 发送邮件
+            </a>
+        </section>
+    </div>
 </body>
 </html>
